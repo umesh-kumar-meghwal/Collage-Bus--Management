@@ -15,20 +15,14 @@ class AdminRegController extends Controller
 
     public function adminreg()
     {
-        $email = session('user');
-        $usertype = session('usertype');
-        if (!empty($email) && $usertype == 'admin') {
+       
             return view('adminreg');
-        }else {
-            return redirect('/error');
-        }
+        
     }
 
     public function store(Request $request)
     {
-        $email = session('user');
-        $usertype = session('usertype');
-        if (!empty($email) && $usertype == 'admin') {
+       
             $f = DB::table('login')->where('email', $request->email)->first();
             if ($f) {
                 $msg = "Admin Registered Already !";
@@ -48,8 +42,6 @@ class AdminRegController extends Controller
                 $msg = "Admin Register Successfully";
             }
             return view('adminreg', compact('msg'));
-        } else {
-            return redirect('/error');
-        }
+       
     }
 }

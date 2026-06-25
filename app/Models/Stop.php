@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Stop extends Model
 {
     protected $table = "stop";
-    public $timestamps =true;
+    public $timestamps =false;
     protected $fillable = [
         'stop_name',
         'route_id',

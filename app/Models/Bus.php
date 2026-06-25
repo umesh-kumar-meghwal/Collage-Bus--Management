@@ -4,7 +4,7 @@ use Illuminate\Database\Eloquent\Model;
 class Bus extends Model
 {
      protected $table = "bus";
-    public $timestamps = true;
+    public $timestamps = false;
     protected $fillable = [
         'bus_number',
         'bus_name',

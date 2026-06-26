@@ -68,7 +68,7 @@
             <!-- Bus Indicator -->
             <div class="flex items-center gap-2.5 text-xs text-slate-600 font-medium">
                 <div class="h-6 w-6 rounded-lg bg-indigo-50 border border-indigo-100 flex items-center justify-center p-0.5">
-                    <img src="https://cdn-icons-png.flaticon.com/512/61/61231.png" class="h-4 w-4" alt="Bus Indicator">
+                    <img src="https://toppng.com/uploads/preview/bus-top-view-clip-art-bus-icon-top-view-11562896756ifkgek2ydy.png" class="h-4 w-4" alt="Bus Indicator">
                 </div>
                 <span>Active School/College Bus</span>
             </div>

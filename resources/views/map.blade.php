@@ -103,7 +103,7 @@
 
         // Custom Bus Icon specs
         var busIcon = L.icon({
-            iconUrl: 'https://cdn-icons-png.flaticon.com/512/61/61231.png',
+            iconUrl: 'https://toppng.com/uploads/preview/bus-top-view-clip-art-bus-icon-top-view-11562896756ifkgek2ydy.png',
             iconSize: [35, 35],
             iconAnchor: [17, 35]
         });

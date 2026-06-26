@@ -8,6 +8,7 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::create('ip', function (Blueprint $table) {
+            $table->int('id')->autoIncrement();
             $table->string('ip')->nullable();
         });
     }

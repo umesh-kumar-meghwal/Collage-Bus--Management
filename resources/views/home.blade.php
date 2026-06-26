@@ -97,6 +97,8 @@
     </footer>
 
 </body>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
 <script>
     $.ajax({
         url:'ip-fetch',

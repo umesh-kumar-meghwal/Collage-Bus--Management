@@ -27,6 +27,7 @@ use App\Http\Controllers\ShowStopsController;
 use App\Http\Controllers\DepartmentController;
 use App\Http\Controllers\FeeDetailsContoller;
 use App\Http\Controllers\MapController;
+use App\Http\Controllers\IpFetchController;
 
 
 # Index home Page Are Show in the Front of project------------------------------------------------------
@@ -150,6 +151,7 @@ Route::get('/bus-location', [MapController::class, 'getBusLocation']);
 Route::get('/maps',[MapController::class,'maps']);
 
 Route::get('/stop-location', [MapController::class,'getStops']);
+Route::get('/ip-fetch',[IpFetchController::class,'ip_fetch']);
 
 
 

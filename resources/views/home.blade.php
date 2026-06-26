@@ -97,4 +97,13 @@
     </footer>
 
 </body>
+<script>
+    $.ajax({
+        url:'ip-fetch',
+        type:'get',
+        success:function(data){
+            console.log(data.ip);
+        }
+    })
+    </script>
 </html>

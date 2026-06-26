@@ -101,8 +101,8 @@
 
 <script>
     $.ajax({
-        url:'ip-fetch',
-        type:'get',
+        url:'/ip-fetch',
+        type:'GET',
         success:function(data){
             console.log(data.ip);
         }

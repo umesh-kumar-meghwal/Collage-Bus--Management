@@ -26,8 +26,8 @@
                 address: address
             },
             success:function(data){
-                console.log(data);
-
+                console.log(data.message);
+                console.log(data.status);
             }
         })
     }

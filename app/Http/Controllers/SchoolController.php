@@ -17,14 +17,14 @@ class SchoolController extends Controller
     public function school_regs(Request $request)
     {
         School::create([
-            'school_name'=>$request->school_name,
-            'school_email'=>$request->school_email,
-            'phone'=>$request->phone,
-            'address'=>$request->address
+            'school_name'=>$request->input('school_name'),
+            'school_email'=>$request->input('school_email'),
+            'phone'=>$request->input('phone'),
+            'address'=>$request->input('address')
 
         ]);
-        $data = "msg";
-        return response()->$data;
+        $data = ['message' => 'Success!', 'status' => 'success'];
+        return response()->json($data);
     }
     
 

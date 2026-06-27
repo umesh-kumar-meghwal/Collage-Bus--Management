@@ -52,7 +52,7 @@
                                     <div class="flex items-center justify-center gap-2">
                                         
                                         <!-- Edit Action -->
-                                        <form action="/studentedit" method="post" class="inline">
+                                        <form action="/school-edit" method="post" class="inline">
                                             @csrf
                                             <input type="hidden" value="{{ $d->school_email }}" name="email">
                                             <button type="submit" class="inline-flex items-center px-3 py-1.5 bg-amber-500 hover:bg-amber-600 text-white rounded-md text-xs font-medium transition shadow-sm">
@@ -63,7 +63,7 @@
                                         <!-- View Details Action -->
                                         <form action="/s-profileshow" method="post" class="inline">
                                             @csrf
-                                            <input type="hidden" value="{{ $d->school_email }}" name="email">
+                                            <input type="hidden" value="{{ $d->email }}" name="email">
                                             <button type="submit" class="inline-flex items-center px-3 py-1.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-md text-xs font-medium transition shadow-sm">
                                                 Details
                                             </button>

@@ -1,3 +1,5 @@
+
+<meta name="csrf-token" content="{{ csrf_token() }}">
 <h1>School Register</h1>
 <p>School Name : <input type="text" name="school_name" id="school_name" placeholder="Enter The School Name" required></p>
 <p>School Email : <input type="text" name="school_email" id="school_email" placeholder="Enter The School Email " required></p>
@@ -18,7 +20,7 @@
             type:"POST",
             data:{
                 _token : "{{ csrf_token() }}",
-                school_name:school_email,
+                school_name:school_name,
                 school_email :school_email,
                 phone :phone,
                 address: address

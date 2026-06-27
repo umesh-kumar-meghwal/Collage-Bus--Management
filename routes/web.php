@@ -158,6 +158,9 @@ Route::get('/ip-fetch',[IpFetchController::class,'ip_fetch']);
 
 Route::get('/school-reg',[SchoolController::class,'school_reg']);
 Route::post('/school-regs',[SchoolController::class,'school_regs']);
+Route::get('/school-dashboard',[SchoolController::class,'school_dashboard']);
+
+
 
 
 

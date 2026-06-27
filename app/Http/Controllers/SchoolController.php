@@ -26,12 +26,24 @@ class SchoolController extends Controller
                 'address' => $request->input('address')
             ]);
             Login::create([
-                'email'=>$request->input('school_email'),
-                'password'=>$request->input('password'),
-                'usertype'=>'school'
+                'email' => $request->input('school_email'),
+                'password' => $request->input('password'),
+                'usertype' => 'school'
             ]);
             $msg = ['message' => 'School Registration Success!', 'status' => 'success'];
         }
         return response()->json($msg);
+    }
+
+
+    public function school_dashboard()
+    {
+        $email = session('user');
+        $usertype = session('usertype');
+        if (!empty($email) && $usertype == 'admin') {
+            return view('school-dashboard');
+        } else {
+            return redirect('/error');
+        }
     }
 }

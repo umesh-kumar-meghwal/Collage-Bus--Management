@@ -37,7 +37,7 @@ class LoginController extends Controller
             }else if($data->usertype=='school'){
                 session(['usertype'=>$data->email]);
                 session(['usertype'=>$data->usertype]);
-                return redirect('school_dashboard');
+                return redirect('school-dashboard');
             }else{
                 session(['user' => $data->email]);
                 session(['usertype' => $data->usertype]);

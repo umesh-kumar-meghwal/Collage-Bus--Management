@@ -13,8 +13,14 @@ class StudentController extends Controller
 {
     public function student()
     {
-        $data = DB::table('department')->get();
-        return view('student', compact('data'));
+        $email = session('user');
+        $usertype = session('usertype');
+        if (!empty($email) && $usertype == 'admin' || $usertype =='school') {
+            $data = DB::table('department')->get();
+            return view('student', compact('data'));
+        } else {
+            return redirect('/error');
+        }
     }
     public function store(Request $request)
     {
@@ -22,7 +28,7 @@ class StudentController extends Controller
         $usertype = session('usertype');
         if (!empty($email) && $usertype == 'admin') {
             $f = DB::table('login')->where('email', $request->email)->first();
-             $data = DB::table('department')->get();
+            $data = DB::table('department')->get();
 
             if ($f) {
                 $msg = "Student Registered Already !";
@@ -45,7 +51,7 @@ class StudentController extends Controller
                 ]);
                 $msg = "Student Register Successfully";
             }
-            return view('student', compact('msg','data'));
+            return view('student', compact('msg', 'data'));
         } else {
             return redirect('/error');
         }

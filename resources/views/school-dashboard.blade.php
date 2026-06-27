@@ -64,15 +64,9 @@
                 <!-- Card 1: User Registration -->
                 <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition duration-200">
                     <h3 class="text-lg font-semibold text-slate-800 mb-4 flex items-center gap-2">
-                        👤 Users & Admins
+                        👤 Students
                     </h3>
                     <div class="flex flex-col gap-2">
-                        <a href="/adminreg" class="block w-full text-left px-4 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-indigo-600 rounded-lg transition">
-                            + Admin Registeration
-                        </a>
-                        <a href="/adminshow" class="block w-full text-left px-4 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-indigo-600 rounded-lg transition">
-                            → Show Admin
-                        </a>
                         <div class="h-[1px] bg-slate-100 my-1"></div>
                         <a href="/student" class="block w-full text-left px-4 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-indigo-600 rounded-lg transition">
                             + Student Register

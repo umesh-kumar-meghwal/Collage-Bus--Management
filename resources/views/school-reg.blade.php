@@ -3,11 +3,11 @@
 <p>School Email : <input type="text" name="school_email" id="school_email" placeholder="Enter The School Email " required></p>
 <p>Phone : <input type="text" name="phone" id="phone" placeholder="Enter The Phone " required>
 <p>Address : <input type="text" name="address" id="address" placeholder="Enter the address" required></p>
-<button id="btn">Submit</button>
+<button onclick="myFuntcion()">Submit</button>
 
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script>
-    document.getElementById('btn').onclick = function() {
+    function myFuntcion(){
         alert('dsd');
         var school_name = document.getElementById('school_name').value;
         var school_email =document.getElementById('school_email').value;

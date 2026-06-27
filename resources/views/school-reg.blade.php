@@ -10,7 +10,6 @@
 <script>
     function myFuntcion(event) {
         if (event) event.preventDefault();
-        alert('dsd');
         var school_name = document.getElementById('school_name').value;
         var school_email = document.getElementById('school_email').value;
         var phone = document.getElementById('phone').value;

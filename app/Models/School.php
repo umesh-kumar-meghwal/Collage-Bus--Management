@@ -11,7 +11,7 @@ class School extends Model
     
     protected $fillable = [
         'id',
-        'shool_name',
+        'school_name',
         'school_email',
         'phone',
         'address'

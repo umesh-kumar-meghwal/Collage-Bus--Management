@@ -30,7 +30,7 @@ class SchoolController extends Controller
                 'password' => $request->input('password'),
                 'usertype' => 'school'
             ]);
-            $msg = ['message' => 'School Registration Success', 'status' => 'success'];
+            $msg = ['message' => 'School Registration Success`', 'status' => 'success'];
         }
         return response()->json($msg);
     }

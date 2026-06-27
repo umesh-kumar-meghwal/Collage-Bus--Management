@@ -14,6 +14,18 @@ class SchoolController extends Controller
     {
         return view('school-reg');
     }
+    public function school_regs(Request $request)
+    {
+        School::create([
+            'school_name'=>$request->school_name,
+            'school_email'=>$request->school_email,
+            'phone'=>$request->phone,
+            'address'=>$request->address
+
+        ]);
+        $data = "msg";
+        return response()->$data;
+    }
     
 
     

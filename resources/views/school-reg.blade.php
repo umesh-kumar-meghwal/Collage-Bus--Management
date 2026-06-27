@@ -8,6 +8,25 @@
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script>
     document.getElementById('btn').onclick = function() {
-alert('dsd');
+        alert('dsd');
+        var school_name = document.getElementById('school_name').value;
+        var school_email =document.getElementById('school_email').value;
+        var phone = document.getElementById('phone').value;
+        var address = document.getElementById('address').value;
+        $.ajax({
+            url:"/school-regs",
+            type:"POST",
+            data:{
+                _token : "{{ csrf_token() }}",
+                school_name:school_email,
+                school_email :school_email,
+                phone :phone,
+                address: address
+            },
+            success:function(data){
+                console.log(data);
+
+            }
+        })
     }
 </script>

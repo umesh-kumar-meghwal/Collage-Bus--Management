@@ -1,4 +1,3 @@
-
 <meta name="csrf-token" content="{{ csrf_token() }}">
 <h1>School Register</h1>
 <p>School Name : <input type="text" name="school_name" id="school_name" placeholder="Enter The School Name" required></p>
@@ -9,25 +8,30 @@
 
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script>
-    function myFuntcion(){
+    function myFuntcion(event) {
+        if (event) event.preventDefault();
         alert('dsd');
         var school_name = document.getElementById('school_name').value;
-        var school_email =document.getElementById('school_email').value;
+        var school_email = document.getElementById('school_email').value;
         var phone = document.getElementById('phone').value;
         var address = document.getElementById('address').value;
+        console.log(school_name);
         $.ajax({
-            url:"/school-regs",
-            type:"POST",
-            data:{
-                _token : "{{ csrf_token() }}",
-                school_name:school_name,
-                school_email :school_email,
-                phone :phone,
+            url: "/school-regs",
+            type: "POST",
+            data: {
+                _token: "{{ csrf_token() }}",
+                school_name: school_name,
+                school_email: school_email,
+                phone: phone,
                 address: address
             },
-            success:function(data){
+            success: function(data) {
                 console.log(data.message);
                 console.log(data.status);
+            },
+            error: function(xhr, status, error) {
+                console.error("Error details:", xhr.responseText);
             }
         })
     }

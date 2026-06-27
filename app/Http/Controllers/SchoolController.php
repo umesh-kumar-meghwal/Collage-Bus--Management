@@ -23,7 +23,7 @@ class SchoolController extends Controller
             'address'=>$request->input('address')
 
         ]);
-        $data = ['message' => 'Success!', 'status' => 'success'];
+        $data = ['message' => 'School Registration Success', 'status' => 'success'];
         return response()->json($data);
     }
     

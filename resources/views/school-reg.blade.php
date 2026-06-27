@@ -5,6 +5,7 @@
 <p>Phone : <input type="text" name="phone" id="phone" placeholder="Enter The Phone " required>
 <p>Address : <input type="text" name="address" id="address" placeholder="Enter the address" required></p>
 <button onclick="myFuntcion()">Submit</button>
+<p id="show"></p>
 
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script>
@@ -26,8 +27,7 @@
                 address: address
             },
             success: function(data) {
-                console.log(data.message);
-                console.log(data.status);
+               document.getElementById('show').innerHTML=data.message;
             },
             error: function(xhr, status, error) {
                 console.error("Error details:", xhr.responseText);

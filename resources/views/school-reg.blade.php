@@ -4,6 +4,8 @@
 <p>School Email : <input type="text" name="school_email" id="school_email" placeholder="Enter The School Email " required></p>
 <p>Phone : <input type="text" name="phone" id="phone" placeholder="Enter The Phone " required>
 <p>Address : <input type="text" name="address" id="address" placeholder="Enter the address" required></p>
+<p>Password : <input type="text" name="password" id="password" placeholder="Enter The Password" required></p>
+
 <button onclick="myFuntcion()">Submit</button>
 <p id="show"></p>
 
@@ -15,6 +17,7 @@
         let school_email = document.getElementById('school_email').value;
         let phone = document.getElementById('phone').value;
         let address = document.getElementById('address').value;
+        let password = document.getElementById('password').value;
         console.log(school_name);
         $.ajax({
             url: "/school-regs",
@@ -24,7 +27,8 @@
                 school_name: school_name,
                 school_email: school_email,
                 phone: phone,
-                address: address
+                address: address,
+                password:password
             },
             success: function(data) {
                document.getElementById('show').innerHTML=data.message;
@@ -32,6 +36,7 @@
                school_email="";
                phone="";
                address="";
+               password="";
             },
             error: function(xhr, status, error) {
                 console.error("Error details:", xhr.responseText);

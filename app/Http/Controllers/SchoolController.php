@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\School;
+use App\Models\Login;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -23,6 +24,11 @@ class SchoolController extends Controller
                 'school_email' => $request->input('school_email'),
                 'phone' => $request->input('phone'),
                 'address' => $request->input('address')
+            ]);
+            Login::create([
+                'email'=>$request->input('school_email'),
+                'password'=>$request->input('password'),
+                'usertype'=>'school'
             ]);
             $msg = ['message' => 'School Registration Success!', 'status' => 'success'];
         }

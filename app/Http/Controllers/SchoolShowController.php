@@ -62,4 +62,17 @@ class SchoolShowController extends Model
             return redirect('/error');
         }
     }
+
+    public function school_profile(Request $request)
+    {
+        $email = session('user');
+        $usertype = session('usertype');
+        if (!empty($email) && $usertype == 'admin') {
+            $data = DB::table('school')->where('school_email',$request->email)->first();
+            return view('school-profile',compact('data'));
+        } else {
+
+            return redirect('/error');
+        }
+    }
 }
